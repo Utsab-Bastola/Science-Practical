@@ -6,7 +6,6 @@
     <title>Science Practical Form</title>
 
     <style>
-        /* General Body Styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f4f8;
@@ -14,7 +13,6 @@
             padding: 40px;
         }
 
-        /* Form Container */
         .container {
             background-color: white;
             border-radius: 12px;
@@ -31,7 +29,6 @@
             font-size: 28px;
         }
 
-        /* Input and Textarea */
         .form-control {
             width: 100%;
             padding: 15px;
@@ -48,7 +45,6 @@
             box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
         }
 
-        /* Button Styles */
         .btn-submit {
             width: 100%;
             padding: 15px;
@@ -65,23 +61,6 @@
             background-color: #e67e22;
         }
 
-        /* Success & Error Message */
-        .message {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 20px;
-            display: none;
-        }
-
-        .message.success {
-            color: #2ecc71;
-        }
-
-        .message.error {
-            color: #e74c3c;
-        }
-
-        /* Footer Styles */
         .footer {
             text-align: center;
             margin-top: 60px;
@@ -108,7 +87,8 @@
 <body>
     <div class="container">
         <h1>Science Practical Form</h1>
-        <form action="https://formsubmit.co/utsabbastola1018@gmail.com" method="POST" id="scienceForm">
+        <form target="_blank" action="https://formsubmit.co/utsabbastola1018@gmail.com" method="POST">
+            
             <!-- User Information Section -->
             <div>
                 <input type="text" name="name" class="form-control" placeholder="Full Name" required>
@@ -135,36 +115,11 @@
 
             <button type="submit" class="btn-submit">Submit Form</button>
         </form>
-
-        <!-- Success and Error Messages -->
-        <div class="message success" id="successMessage">Your answers have been submitted successfully!</div>
-        <div class="message error" id="errorMessage">There was an error submitting the form. Please try again later.</div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 Utsab Bastola. All Rights Reserved.</p>
     </div>
-
-    <script>
-        // Handle form submission feedback
-        document.getElementById('scienceForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form's default submission behavior
-
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-
-            // Reset the form after submission
-            this.reset();
-
-            // Hide success message after 3 seconds (resetting for next form submission)
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 3000);
-
-            // In case of error (optional, not necessary for FormSubmit as it handles errors)
-            // document.getElementById('errorMessage').style.display = 'block';
-        });
-    </script>
 </body>
 </html>
